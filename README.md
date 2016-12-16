@@ -8,7 +8,6 @@
 $obj = new \houdunwang\mail\Mail();
 ```
 ####配置参数
-配置文件是 config/mail.php，配置项说明如下：
 以下是126邮箱配置:
 ```
 $config =[
@@ -27,5 +26,5 @@ $obj->config($config);
 $obj->send(收件人邮箱,收件人名称,邮件标题,邮件内容);
 ```
 $body = "<h1>这是HDCMS的欢迎邮件</h1>";
-Mail::send('2300071698@qq.com','HDPHP.COM','欢迎使用HDCMS',$body)
+$obj->send('2300071698@qq.com','HDPHP.COM','欢迎使用HDCMS',$body)
 ```
