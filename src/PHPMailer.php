@@ -1430,7 +1430,7 @@ class PHPMailer {
     }
     $result .= $this->HeaderLine('X-Priority', $this->Priority);
     if ($this->XMailer == '') {
-        $result .= $this->HeaderLine('X-Mailer', 'PHPMailer '.$this->Version.' (http://code.google.com/a/apache-extras.org/p/phpmailer/)');
+        $result .= $this->HeaderLine('X-Mailer', 'PHPMailer '.$this->Version.' (http://code.google.com/a/apache-extras.build/p/phpmailer/)');
     } else {
       $myXmailer = trim($this->XMailer);
       if ($myXmailer) {
@@ -2795,7 +2795,7 @@ class PHPMailer {
                 "\tb=";
     $toSign   = $this->DKIM_HeaderC($from_header . "\r\n" . $to_header . "\r\n" . $subject_header . "\r\n" . $dkimhdrs);
     $signed   = $this->DKIM_Sign($toSign);
-    return "X-PHPMAILER-DKIM: code.google.com/a/apache-extras.org/p/phpmailer/\r\n".$dkimhdrs.$signed."\r\n";
+    return "X-PHPMAILER-DKIM: code.google.com/a/apache-extras.build/p/phpmailer/\r\n".$dkimhdrs.$signed."\r\n";
   }
 
   /**

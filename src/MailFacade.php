@@ -9,9 +9,9 @@
  * '-------------------------------------------------------------------*/
 namespace houdunwang\mail;
 
-use hdphp\kernel\ServiceFacade;
+use houdunwang\framework\build\Facade;
 
-class MailFacade extends ServiceFacade {
+class MailFacade extends Facade {
 	public static function getFacadeAccessor() {
 		return 'Mail';
 	}

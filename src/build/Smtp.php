@@ -1,4 +1,4 @@
-<?php namespace houdunwang\mail;
+<?php namespace houdunwang\mail\build;
 /*~ Tool.smtp.php
 .---------------------------------------------------------------------------.
 |  Software: PHPMailer - PHP email Tool                                    |

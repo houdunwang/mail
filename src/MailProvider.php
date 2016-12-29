@@ -9,15 +9,14 @@
  * '-------------------------------------------------------------------*/
 namespace houdunwang\mail;
 
-use hdphp\kernel\ServiceProvider;
+use houdunwang\framework\build\Provider;
 
-class MailProvider extends ServiceProvider {
+class MailProvider extends Provider {
 
 	//延迟加载
 	public $defer = true;
 
 	public function boot() {
-		\Mail::config( c( 'mail' ) );
 	}
 
 	public function register() {
