@@ -1,4 +1,4 @@
-<?php namespace houdunwang\mail;
+<?php namespace houdunwang\mail\build;
 use hdphp\mail\Smtp;
 use Exception;
 /*~ Tool.phpmailer.php
