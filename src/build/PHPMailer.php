@@ -1,5 +1,5 @@
 <?php namespace houdunwang\mail\build;
-use hdphp\mail\Smtp;
+
 use Exception;
 /*~ Tool.phpmailer.php
 .---------------------------------------------------------------------------.
@@ -1049,7 +1049,7 @@ class PHPMailer {
    */
   public function SmtpConnect() {
     if(is_null($this->smtp)) {
-      $this->smtp = new SMTP;
+      $this->smtp = new Smtp();
     }
 
     $this->smtp->Timeout = $this->Timeout;
