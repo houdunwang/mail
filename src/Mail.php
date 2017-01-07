@@ -1,6 +1,7 @@
 <?php namespace houdunwang\mail;
 
 use houdunwang\config\Config;
+use houdunwang\mail\build\Base;
 
 /** .-------------------------------------------------------------------
  * |  Software: [HDCMS framework]
