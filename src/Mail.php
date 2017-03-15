@@ -1,6 +1,5 @@
 <?php namespace houdunwang\mail;
 
-use houdunwang\config\Config;
 use houdunwang\mail\build\Base;
 
 /** .-------------------------------------------------------------------
@@ -16,8 +15,6 @@ class Mail {
 
 	protected function driver() {
 		$this->link = new Base();
-		$this->link->config( Config::get( 'mail' ) );
-
 		return $this;
 	}
 
