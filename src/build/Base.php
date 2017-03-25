@@ -10,6 +10,8 @@
 namespace houdunwang\mail\build;
 
 //错误处理
+use houdunwang\config\Config;
+
 class Base {
 	//邮件对象
 	protected $mail;
@@ -51,22 +53,23 @@ class Base {
 		$this->mail->CharSet  = "utf-8";
 		$this->mail->SMTPAuth = true;
 		//是否需要验证
-		if ( Config::set( 'mail.ssh' ) ) {
+		if ( Config::get( 'mail.ssl' ) ) {
 			//是否为ssl  gmail邮箱需要设置   126等不要设置注释掉
 			$this->mail->SMTPSecure = "ssl";
 
 		}
-		$this->mail->Host = Config::set( 'mail.host' );
+//		p(Config::get( 'mail' ));exit;
+		$this->mail->Host = Config::get( 'mail.host' );
 		//邮箱服务器smtp地址如smtp.gmail.com或smtp.126.com
-		$this->mail->Port = Config::set( 'mail.port' );
+		$this->mail->Port = Config::get( 'mail.port' );
 		//邮箱服务器smtp端口，126等25，gmail 465
-		$this->mail->Username = Config::set( 'mail.username' );
+		$this->mail->Username = Config::get( 'mail.username' );
 		//发送邮件邮箱用户名
-		$this->mail->Password = Config::set( 'mail.password' );
+		$this->mail->Password = Config::get( 'mail.password' );
 		//发送邮件邮箱密码
-		$this->mail->SetFrom( Config::set( 'mail.username' ), onfig::set( 'mail.fromname' ) );
+		$this->mail->SetFrom( Config::get( 'mail.username' ), Config::get( 'mail.fromname' ) );
 		//发件人
-		$this->mail->AddReplyTo( Config::set( 'mail.frommail' ), Config::set( 'mail.fromname' ) );
+		$this->mail->AddReplyTo( Config::set( 'mail.frommail' ), Config::get( 'mail.fromname' ) );
 		//回复时显示的用户名
 		$this->mail->WordWrap = 50;
 		//换行文字
