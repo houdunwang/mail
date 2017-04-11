@@ -69,7 +69,7 @@ class Base {
 		//发送邮件邮箱密码
 		$this->mail->SetFrom( Config::get( 'mail.username' ), Config::get( 'mail.fromname' ) );
 		//发件人
-		$this->mail->AddReplyTo( Config::set( 'mail.frommail' ), Config::get( 'mail.fromname' ) );
+		$this->mail->AddReplyTo( Config::get( 'mail.frommail' ), Config::get( 'mail.fromname' ) );
 		//回复时显示的用户名
 		$this->mail->WordWrap = 50;
 		//换行文字
