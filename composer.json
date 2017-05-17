@@ -1,7 +1,6 @@
 {
   "name": "houdunwang/mail",
   "description": "邮件组件内部集成了方便的邮件发送机制，使用非常简单",
-  "type": "project",
   "keywords": [
     "houdunwang",
     "hdphp",
