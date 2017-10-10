@@ -24,7 +24,7 @@ class Base
     {
         $mail = new \PHPMailer();
         $mail->isSMTP();
-        $mail->CharSet='utf-8';
+        $mail->CharSet = 'utf-8';
         // Specify main and backup SMTP servers
         $mail->Host = Config::get('mail.host');
         // Enable SMTP authentication
@@ -44,6 +44,9 @@ class Base
         // Add a recipient
         $mail->addAddress($usermail, $username);
         $mail->Subject = $title;
+        if ($body instanceof \Closure) {
+            $body = $body();
+        }
         $mail->msgHTML($body);
 
         return $mail->send();
